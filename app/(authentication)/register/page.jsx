@@ -5,17 +5,18 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import React, { useState } from 'react'
 
-function Login() {
+function Register() {
 
   const [error, setError] = useState('');
   const [successMsg, setSuccessMsg] = useState('');
+  const router = useRouter();
 
   const handleLogin = (e) => {
     e.preventDefault();
     setError('');
     setSuccessMsg('');
 
-    const router = useRouter();
+
 
     let firstName = e.target['first-name'].value;
     let lastName = e.target['last-name'].value;
@@ -77,4 +78,4 @@ function Login() {
   )
 }
 
-export default Login
+export default Register
